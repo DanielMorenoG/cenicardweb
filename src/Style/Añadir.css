@@ -1,0 +1,229 @@
+.Admin_Añadir {
+  display: flex;
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+.Contenedor_Añadir {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.Zona_Trabajo_Añadir {
+  padding: var(--space-8);
+}
+
+.Panel_Blanco_Añadir {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-5);
+  text-align: center;
+  border: 1px solid var(--color-border-light);
+}
+
+.Titulo_Interno {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-6);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.Barra_Verde_Acciones {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.Tag_Entregados {
+  color: white;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+}
+
+.Buscador_Tabla {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  width: 45%;
+  min-width: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.Buscador_Tabla:focus-within {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.Buscador_Tabla input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  margin-left: var(--space-3);
+  width: 100%;
+  font-size: var(--font-size-sm);
+}
+
+.Buscador_Tabla input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.Contenedor_Tabla {
+  overflow-x: auto;
+}
+
+.Tabla_Entregas {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.Tabla_Entregas th {
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-4) var(--space-3);
+  border-bottom: 2px solid var(--color-border-light);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.Tabla_Entregas td {
+  padding: var(--space-4) var(--space-3);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: var(--font-size-sm);
+}
+
+.Tabla_Entregas tbody tr:hover {
+  background: var(--color-primary-50);
+}
+
+.Hora_Pill {
+  background: var(--color-bg);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  display: inline-block;
+}
+
+.Estado_Check {
+  color: var(--color-success);
+  font-weight: var(--font-weight-semibold);
+}
+
+.Btn_Liberar {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+}
+
+.Btn_Liberar:hover {
+  background: var(--color-primary-dark);
+}
+
+.Btn_Entregado {
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Zona_Trabajo_Añadir {
+    padding: var(--space-6);
+  }
+
+  .Panel_Blanco_Añadir {
+    padding: var(--space-6);
+  }
+
+  .Titulo_Interno {
+    font-size: var(--font-size-xl);
+  }
+
+  .Buscador_Tabla {
+    width: 60%;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .Zona_Trabajo_Añadir {
+    padding: var(--space-4);
+  }
+
+  .Panel_Blanco_Añadir {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .Titulo_Interno {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+  }
+
+  .Barra_Verde_Acciones {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-4);
+  }
+
+  .Tag_Entregados {
+    text-align: center;
+  }
+
+  .Buscador_Tabla {
+    width: 100%;
+  }
+
+  .Tabla_Entregas {
+    min-width: 500px;
+  }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+  .Zona_Trabajo_Añadir {
+    padding: var(--space-3);
+  }
+
+  .Panel_Blanco_Añadir {
+    padding: var(--space-3);
+  }
+
+  .Titulo_Interno {
+    font-size: var(--font-size-base);
+  }
+
+  .Barra_Verde_Acciones {
+    padding: var(--space-3);
+  }
+
+  .Tag_Entregados {
+    font-size: var(--font-size-base);
+  }
+}
